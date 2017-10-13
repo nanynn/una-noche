@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+}
+
+.first {
+    background-image: url(../img/fiesta-copia.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+}
+
+@media (max-width: 736px) {
+    .first {
+        height: 80vh;
+    }
+}
+
+.logo {
+    width: 10%;
+}
+
+.logo-mobile {
+    width: 80%;
+}
+
+.second {
+    height: 80vh;
+    background-color: #7F7F7F;
+}
+
+.segunda-img {
+    width: 120%;
+}
+
+footer {
+    text-align: center;
+}
