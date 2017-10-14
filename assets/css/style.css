@@ -3,6 +3,16 @@ body {
     background-color: #000;
 }
 
+nav.navbar {
+  z-index: 9999;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+}
+
+nav.navbar a {
+  white-space: nowrap;
+}
+
 .first {
     background-image: url(../img/fiesta-copia.png);
     background-size: cover;
@@ -10,11 +20,16 @@ body {
     background-position: center;
     height: 100vh;
     width: 100%;
+    margin-top: -90px;
 }
 
 .first .container {
     text-align: center;
-    padding: 10% 0 20px 0;
+    padding: 20% 0 20px 0;
+}
+
+section:not(.first) {
+  padding-top: 80px;
 }
 
 @media (max-width: 736px) {
@@ -52,17 +67,26 @@ body {
 }
 
 .third li {
-  list-style: none;
+  list-style-type: square;
   color: #fff;
   margin: 10px 0;
   font-size: 1.1em;
+}
+
+.four {
+  min-height: 80vh;
 }
 .four h2 {
   color: #3fbad9;
 }
 
-footer {
+footer p {
     text-align: center;
+    font-size: 0.8em;
+}
+
+a.chirimoya {
+  color: #BADA55;
 }
 
 h4 {
@@ -73,9 +97,9 @@ div.texto {
   padding: 15% 0;
 }
 
-form {
+ form {
   width: 70%;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 form label {
   color: #FFF;
