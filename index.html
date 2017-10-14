@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -89,17 +88,17 @@
                     <form method="POST" action="https://formspree.io/chirimoyaestudio@gmail.com">
                       <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre">
+                        <input name="nombre" type="text" class="form-control" id="nombre" required>
                       </div>
                       <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email">
+                        <input name="_replyto" type="email" class="form-control" id="email" required>
                       </div>
                       <div class="form-group">
                         <label for="pwd">Mensaje:</label>
-                        <textarea class="form-control"></textarea>
+                        <textarea name="mensaje" class="form-control" required></textarea>
                       </div>
-                      <button type="submit" class="btn btn-default float-right">Enviar</button>
+                      <input type="submit" class="btn btn-default float-right" value="Enviar" />
                     </form>
                 </div>
             </div>
@@ -113,5 +112,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="assets/js/main.js"></script>
 </body>
-
 </html>
