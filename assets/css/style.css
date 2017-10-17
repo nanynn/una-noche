@@ -1,17 +1,46 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #000;
+    padding: 0;
+    margin: 0;
 }
 
+
+
+
+
+
+
+/*navegador*/
+
 nav.navbar {
-  z-index: 9999;
-  background: rgba(0,0,0,0.6);
-  width: 100%;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
 }
 
 nav.navbar a {
-  white-space: nowrap;
+    white-space: nowrap;
 }
+
+nav.navbar a:hover {
+    color: #db0879;
+}
+
+.logo {
+    width: 15%;
+}
+
+
+
+
+
+
+
+/*fin de navegador*/
+
+
+/*primera sección*/
 
 .first {
     background-image: url(../img/fiesta-copia.png);
@@ -28,26 +57,34 @@ nav.navbar a {
     padding: 20% 0 20px 0;
 }
 
-section:not(.first) {
-  padding-top: 80px;
+.logo-mobile {
+    width: 80%;
 }
 
 @media (max-width: 736px) {
     .first {
         height: 80vh;
+        padding: 40% 0 20px 0;
+    }
+
+    .logo-mobile {
+        width: 100%;
     }
 }
 
-.logo {
-    width: 15%;
-}
 
-.logo-mobile {
-    width: 80%;
-}
+
+
+
+
+
+/*fin primera sección*/
+
+
+/*segunda sección*/
 
 .second {
-    background-color: #7F7F7F;
+    background-color: #3F3F3F;
 }
 
 .segunda-img {
@@ -55,57 +92,144 @@ section:not(.first) {
 }
 
 .second h2 {
-    color: #000;
+    color: #3fbad9;
+    font-weight: 700;
 }
 
 .second p {
-  font-size: 1.1em;
+    font-size: 1.1em;
+    padding-top: 5%;
+    color: #fff;
 }
 
+@media (max-width: 736px) {
+    .second {
+        padding: 3% 0;
+    }
+    .segunda-img {
+        width: 100%;
+    }
+    .second h2 {
+        text-align: left;
+        padding: 0 5%;
+    }
+
+    .second p {
+        font-size: 1.1em;
+        text-align: center;
+        padding: 0 5%;
+    }
+}
+
+
+
+
+
+
+
+/*fin segunda sección*/
+
+
+/*tercera sección*/
+
 .third h2 {
-  color: #db0879;
+    color: #db0879;
+    font-weight: 700;
 }
 
 .third li {
-  list-style-type: square;
-  color: #fff;
-  margin: 10px 0;
-  font-size: 1.1em;
+    list-style-type: square;
+    color: #fff;
+    margin: 10px 0;
+    font-size: 1.1em;
 }
 
-.four {
-  min-height: 80vh;
+@media (max-width: 736px) {
+    .third h2 {
+        text-align: left;
+        padding: 0 5%;
+    }
 }
+
+
+
+
+
+
+
+/*fin tercera sección*/
+
+
+/*cuarta sección*/
+
+.four {
+    min-height: 80vh;
+    background-color: #3F3F3F;
+}
+
 .four h2 {
-  color: #3fbad9;
+    color: #3fbad9;
+    font-weight: 700;
+}
+
+@media (max-width: 736px) {
+    .four h2 {
+        text-align: left;
+        padding: 5% 0;
+    }
+}
+
+form {
+    width: 70%;
+    margin: 30px auto;
+}
+
+form label {
+    color: #FFF;
+}
+
+form .btn {
+    background-color: #db0879;
+    color: #fff;
+}
+
+
+
+
+
+
+
+/*fin cuarta sección*/
+
+
+/*footer*/
+
+footer {
+    padding: 2% 0;
 }
 
 footer p {
     text-align: center;
     font-size: 0.8em;
+    color: #fff;
 }
 
 a.chirimoya {
-  color: #BADA55;
+    color: #BADA55;
 }
 
 h4 {
-  color: #FFF;
+    color: #FFF;
 }
 
 div.texto {
-  padding: 15% 0;
+    padding: 15% 0;
 }
 
- form {
-  width: 70%;
-  margin: 30px auto;
-}
-form label {
-  color: #FFF;
-}
 
-form .btn {
-  background-color: #db0879;
-  color: #fff;
-}
+
+
+
+
+
+/*fin footer*/

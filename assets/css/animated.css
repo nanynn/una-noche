@@ -1,33 +1,33 @@
-h1 {
+.titulo {
     font-size: 80px;
     color: #fff;
     font-weight: 700;
 }
 
-h2 {
+.subtitulo {
     font-size: 36px;
     color: #fff;
 }
 
-p {
+.bajada {
     font-size: 18px;
     margin: 2em;
     color: #fff;
 }
 
 @media (max-width: 738px) {
-    h1 {
+    .titulo {
         font-size: 48px;
         color: #fff;
         font-weight: 700;
     }
 
-    h2 {
+    .subtitulo {
         font-size: 21px;
         color: #fff;
     }
 
-    p {
+    .bajada {
         font-size: 14px;
         margin: 2em;
         color: #fff;
