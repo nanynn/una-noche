@@ -17,10 +17,6 @@ div.texto {
 
 
 
-
-
-
-
 /*navegador*/
 
 nav.navbar {
@@ -43,12 +39,6 @@ nav.navbar a:hover {
 
 
 
-
-
-
-
-
-
 /*fin de navegador*/
 
 
@@ -59,36 +49,54 @@ nav.navbar a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    background-attachment: fixed;
     width: 100%;
     margin-top: -90px;
 }
 
 .first .container {
     text-align: center;
-    padding: 20% 0 20px 0;
+    padding: 10% 0 10% 0;
 }
 
 .logo-mobile {
     width: 80%;
 }
 
-@media (max-width: 736px) {
-    .first {
-        height: 80vh;
-        padding: 30% 0 10% 0;
-    }
+.video {
+    width: 80%;
+    height: 60vh;
+    margin: 0;
+    padding: 0;
+}
 
+
+@media (max-width: 1024px) {
+    .first {
+        padding: 10% 0 10% 0;
+    }
     .logo-mobile {
         width: 100%;
+    }
+    .video {
+        width: 90%;
+        height: 40vh;
     }
 }
 
 
-
-
-
-
+@media (max-width: 736px) {
+    .first {
+        padding: 30% 0 10% 0;
+    }
+    .logo-mobile {
+        width: 100%;
+    }
+    .video {
+        width: 90%;
+        height: 30vh;
+    }
+}
 
 
 
@@ -102,7 +110,7 @@ nav.navbar a:hover {
 }
 
 .segunda-img {
-    width: 120%;
+    width: 100%;
 }
 
 .second h2 {
@@ -120,24 +128,16 @@ nav.navbar a:hover {
     .second {
         padding: 3% 0;
     }
-    .segunda-img {
-        width: 100%;
-    }
-    .second h2 {
-        text-align: left;
-    }
-
-    .second p {
-        font-size: 1.1em;
-        text-align: left;
-    }
 }
 
+.second h2 {
+    text-align: left;
+}
 
-
-
-
-
+.second p {
+    font-size: 1.1em;
+    text-align: left;
+}
 
 
 
@@ -162,13 +162,11 @@ nav.navbar a:hover {
     .third h2 {
         text-align: left;
     }
+
+    .segunda-img {
+        padding-top: 0;
+    }
 }
-
-
-
-
-
-
 
 
 
@@ -178,7 +176,6 @@ nav.navbar a:hover {
 /*cuarta sección*/
 
 .four {
-    min-height: 80vh;
     background-color: #3F3F3F;
 }
 
@@ -209,12 +206,6 @@ form .btn {
 
 
 
-
-
-
-
-
-
 /*fin cuarta sección*/
 
 
@@ -237,13 +228,6 @@ a.chirimoya {
 h4 {
     color: #FFF;
 }
-
-
-
-
-
-
-
 
 
 
