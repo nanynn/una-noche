@@ -67,7 +67,7 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div id="player"></div>
-                    <form id="opinion" class="row" method="POST" action="https://formspree.io/chirimoyaestudio@gmail.com">
+                    <form id="opinion" class="row clearfix" method="POST" action="https://formspree.io/chirimoyaestudio@gmail.com">
                         <div class="col-md-10 offset-md-1">
                             <h2>¡Queremos saber tu opinión!</h2>
                             <fieldset class="form-group">
@@ -228,12 +228,15 @@
             }
         }
 
-        function stopVideo() {
-            player.stopVideo();
-        }
-
         $('#ver-mas').click(function(){
             player.playVideo();
+        });
+
+        $('#video').modal({
+            show: false
+        }).on('hidden.bs.modal', function(){
+            player.stopVideo();
+            $('#opinion').hide();
         });
 
         $('#video-otra-vez').click(function(){
