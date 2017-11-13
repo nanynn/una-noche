@@ -129,7 +129,8 @@ nav.navbar a:hover {
 
 .zero h2 {
     font-family: "Grand Hotel", cursive;
-    font-size: 3em;
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
 
 .zero * {
@@ -143,6 +144,10 @@ nav.navbar a:hover {
 
 .zero .slider strong {
     padding: 0 15px;
+}
+
+.zero .btn {
+    cursor: pointer;
 }
 
 @-webkit-keyframes neon1 {

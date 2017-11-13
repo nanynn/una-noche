@@ -26,11 +26,10 @@ $(document).ready(function() {
             method: 'POST',
             url: 'https://formspree.io/chirimoyaestudio@gmail.com',
             data: $('#opinion').serialize(),
-            datatype: 'json',
+            dataType: 'json',
             success: function(){
                 swal('¡Muchas Gracias!','Tu opinión ha sido enviada', 'success');
                 $('#video').modal('hide');
-
             },
             error: function(){
                 swal('¡Lo sentimos!','Hubo un error, inténtalo más tarde', 'error');
