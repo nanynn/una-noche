@@ -15,16 +15,20 @@
 
     gtag('config', 'UA-77510238-2');
     </script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grand+Hotel|Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md sticky-top navbar-dark">
-        <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#nav-principal" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#nav-principal"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="container">
@@ -55,16 +59,56 @@
         </div>
     </nav>
     <section class="zero">
-        <div style="width:100%;height:0;padding-bottom:56%;position:relative;">
-            <div style="width:100%;height:0;padding-bottom:56%;position:relative;">
-                <iframe src="https://giphy.com/embed/xUNd9Hwly4akZDYa3K" width="100%" height="100%"
-                        style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <img src="assets/img/neon.gif" alt="">
+        <button id="ver-mas" type="button" class="btn-ver-mas" data-toggle="modal"
+            data-target="#video">Ver más</button>
+
+        <div id="video" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div id="player"></div>
+                    <form id="opinion"> <!--action="https://formspree.io/chirimoyaestudio@gmail.com"-->
+                        <div class="container">
+                            <h2>¡Queremos saber tu opinión!</h2>
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <legend class="col-sm-4 col-form-legend">¿Te interesaría probar el juego?</legend>
+                                    <div class="col-sm-8">
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" value="si" name="probaria-el-juego" type="radio" checked>Sí</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" value="no" name="probaria-el-juego" type="radio">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label" for="pago">¿Cuánto estarías dispuesto/a a pagar por un juego de este tipo?</label>
+                                <div class="col-sm-8 slider">
+                                    <span>$0</span>&nbsp;<input id="pago" data-slider-id='pago' type="text" data-slider-min="0"
+                                                              data-slider-max="10000" data-slider-step="500" data-slider-value="5000" />&nbsp;<span>$10000</span>
+                                    <strong id="valor-pago">$5000</strong>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-4 col-form-label" for="email-info">Si quieres recibir más información, indícanos tu correo electrónico</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" id="email-info" type="email" />
+                                </div>
+                            </div>
+                            <div class="form-group d-flex justify-content-center">
+                                <button type="submit" class="btn col-xs-6">Enviar</button>
+                            </div>
+                            <input type="hidden" name="_subject" value="Nueva Opinión">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="col-xs-12 col-md-8">
-            <!--<iframe class="video" src="https://www.youtube.com/embed/a-5_vP25eek"
-                    frameborder="0" gesture="media" allowfullscreen></iframe>-->
-        </div>
+
     </section>
     <section id="primera" class="first">
         <div class="container">
@@ -136,10 +180,67 @@
         <p>Creado por <a class="chirimoya" href="http://www.chirimoyaestudio.cl">Chirimoya Estudio Creativo</a> 2017
             <br> &copy; Todos los derechos reservados | Proyecto de Innovación 2017</p>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+            integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+            integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.5/sweetalert2.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        $('#opinion').hide();
+
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+                height: '390',
+                width: '640',
+                videoId: 'a-5_vP25eek',
+                events: {
+                    'onStateChange': checkVideoEnded
+                }
+            });
+        }
+
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+
+        function checkVideoEnded(){
+            if(player.getPlayerState() === 0){
+                $('#opinion').show();
+            }
+        }
+
+        function stopVideo() {
+            player.stopVideo();
+        }
+
+        $('#ver-mas').click(function(){
+            player.playVideo();
+        });
+
+        $('#video-otra-vez').click(function(){
+            $('#opinion').hide();
+            player.play();
+        });
+    </script>
 </body>
 
 </html>
